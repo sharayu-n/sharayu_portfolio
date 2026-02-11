@@ -69,7 +69,7 @@ if (contactForm) {
       .then(() => {
 
         // Send auto reply to USER
-        emailjs.sendForm("service_kvt05fp", "template_hd5pybl", this);
+        emailjs.sendForm("service_kvt05fp", "template_rr8aj2lS", this);
 
         submitBtn.innerText = "Message Sent ✓";
         contactForm.reset();
