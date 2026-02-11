@@ -1,4 +1,5 @@
-// Custom cursor
+// ================= CUSTOM CURSOR =================
+
 const cursor = document.querySelector('.cursor');
 let mouseX = 0, mouseY = 0;
 
@@ -8,23 +9,28 @@ document.addEventListener('mousemove', (e) => {
 });
 
 function animateCursor() {
-  cursor.style.left = mouseX + 'px';
-  cursor.style.top = mouseY + 'px';
+  if (cursor) {
+    cursor.style.left = mouseX + 'px';
+    cursor.style.top = mouseY + 'px';
+  }
   requestAnimationFrame(animateCursor);
 }
 animateCursor();
 
 // Interactive cursor effects
-document.querySelectorAll('a, button, .project-card, .skill-card, .education-card, .experience-card, .contact-card').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'scale(2)';
+document.querySelectorAll('a, button, .project-card, .skill-card, .education-card, .experience-card, .contact-card')
+  .forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      if (cursor) cursor.style.transform = 'scale(2)';
+    });
+    el.addEventListener('mouseleave', () => {
+      if (cursor) cursor.style.transform = 'scale(1)';
+    });
   });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'scale(1)';
-  });
-});
 
-// Smooth scrolling
+
+// ================= SMOOTH SCROLLING =================
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -37,3 +43,52 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+
+// ================= EMAILJS CONTACT FORM =================
+
+// Initialize EmailJS
+(function () {
+  emailjs.init("j4NKG2Hmvj2ahcR-S"); // 🔴 Replace with your Public Key
+})();
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector(".submit-btn");
+
+    submitBtn.innerText = "Sending...";
+    submitBtn.disabled = true;
+
+    // Send email to YOU
+    emailjs.sendForm("service_kvt05fp", "template_hd5pybl", this)
+      .then(() => {
+
+        // Send auto reply to USER
+        emailjs.sendForm("service_kvt05fp", "template_hd5pybl", this);
+
+        submitBtn.innerText = "Message Sent ✓";
+        contactForm.reset();
+
+        setTimeout(() => {
+          submitBtn.innerText = "Send Message";
+          submitBtn.disabled = false;
+        }, 3000);
+
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        submitBtn.innerText = "Failed ❌";
+
+        setTimeout(() => {
+          submitBtn.innerText = "Send Message";
+          submitBtn.disabled = false;
+        }, 3000);
+      });
+  });
+
+}
