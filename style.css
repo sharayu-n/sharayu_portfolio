@@ -457,6 +457,22 @@ body {
     border-left: 4px solid #764ba2;
     font-weight: 500;
 }
+.github-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    margin-top: 10px;
+    background-color: #24292e;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.github-btn:hover {
+    background-color: #0366d6;
+}
+
 
 /* Experience Section */
 .experience {
