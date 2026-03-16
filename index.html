@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,10 +20,16 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">
+                        <span>☀️</span><span>Light</span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
 
+    <!-- ===================== HERO ===================== -->
     <section id="home" class="hero">
         <div class="floating-elements">
             <div class="floating-element"></div>
@@ -37,11 +43,11 @@
                 <p class="hero-description">Impossible takes time; what truly matters is being consistent in making the best use of that time. We are moving towards the new era of digital immortality and key to it is 'Data' and I would love to be a part of once impossible now future!!!</p>
                 <p class="hero-location">📍 Los Angeles, California</p>
                 <div class="cta-buttons">
-                    <a href="resume.pdf" class="cta-button" download="Sharayu_Nagre_Resume.pdf">Download Resume</a>
+                    <a href="SharayuNagreResume-CSDS.pdf" class="cta-button" download="Sharayu_Nagre_Resume.pdf">Download Resume</a>
                     <a href="#contact" class="cta-button secondary">Get In Touch</a>
                 </div>
             </div>
-            
+
             <div class="hero-photo-section">
                 <div class="profile-photo-container">
                     <img src="me.jpg" alt="Sharayu Nagre" class="profile-photo">
@@ -50,14 +56,14 @@
         </div>
     </section>
 
+    <!-- ===================== ABOUT ===================== -->
     <section id="about" class="about section">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-text">
                 <p>Hi, I'm Sharayu, a Master's student in Computer Science specializing in Data Science. I enjoy working at the intersection of programming, data, and problem-solving, with skills in Python, web development, machine learning, and data analysis. I'm always curious to learn, experiment, and build projects that create real impact. Beyond academics, I love traveling, exploring art and food, and contributing to community development. My goal is to never feel morally compromised by whatever I pursue.</p>
-                 <br>
+                <br>
                 <p>I believe that experiences are instrumental in personal and professional growth, and I am eager to expand my horizons through meaningful experiences that contribute to my development as an individual. I am particularly interested in securing an internship opportunity to augment my knowledge and skills.</p>
-               
             </div>
             <div class="education-section">
                 <div class="education-card">
@@ -71,92 +77,132 @@
                     <div class="education-school">University of Mumbai</div>
                     <div class="education-duration">December 2021 - May 2025</div>
                     <div class="relevant-skills">Relevant Course Work: Advance Data Structure and Algorithms | Computer Architecture | System Design | OOPs | Database Management Systems | Software Engineering | Game Theory | Project Management | ERP</div>
-                    <p style="margin-top: 0.5rem; opacity: 0.8;">GPA: 3.8/4  • Honors in AI&ML</p>
+                    <p style="margin-top: 0.5rem; color: var(--text-dim); font-size: 0.9rem;">GPA: 3.8/4  • Honors in AI&ML</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===================== SKILLS ===================== -->
     <section id="skills" class="skills section">
         <div class="skills-container">
+            <p class="skills-eyebrow">hover to explore</p>
             <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-categories">
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">R</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">Data Structure Algorithms</span>
 
+            <div class="s4-grid">
+
+                <div class="s4-block">
+                    <div class="s4-bar"></div>
+                    <div class="s4-block-top">
+                        <div class="s4-icon-wrap">🐍</div>
                     </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Data Science & ML</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">Seaborn</span>
-                        <span class="skill-tag">Keras</span>
-                        <span class="skill-tag">Pytorch</span>
-                        <span class="skill-tag">OpenCV</span>
-                        <span class="skill-tag">Hugging Face</span>
-                        <span class="skill-tag">Vosk</span>
-                        <span class="skill-tag">Langchain</span>
-                        <span class="skill-tag">Jupyter Notebook</span>
-                        <span class="skill-tag">Power BI</span>
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">EDA</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Kaggle</span>
+                    <div class="s4-cat-name">Programming</div>
+                    <div class="s4-cat-desc">Languages I think and build in</div>
+                    <div class="s4-tags-visible">
+                        <span class="s4-tag hi">Python</span>
+                        <span class="s4-tag hi">TypeScript</span>
+                        <span class="s4-tag hi">Data Structures and Algorithms</span>
+                        <span class="s4-tag">Java</span>
                     </div>
+                    <div class="s4-tags-hidden">
+                        <span class="s4-tag">C++</span>
+                        <span class="s4-tag">SQL</span>
+                        <span class="s4-tag">HTML / CSS</span>
+                    </div>
+                    <div class="s4-arrow">all 7 skills ↗</div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Software Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Flask</span>
-                        <span class="skill-tag">MERN Stack</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">Vite</span>
-                        <span class="skill-tag">RESTful API</span>
-                        <span class="skill-tag">Redis</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Flutter</span>
-                        <span class="skill-tag">Next.js</span>
+                <div class="s4-block">
+                    <div class="s4-bar"></div>
+                    <div class="s4-block-top">
+                        <div class="s4-icon-wrap">🧠</div>
                     </div>
+                    <div class="s4-cat-name">Data Science & ML</div>
+                    <div class="s4-cat-desc">Models, pipelines & intelligence</div>
+                    <div class="s4-tags-visible">
+                        <span class="s4-tag hi">Retrieval-Augmented Generation (RAG)</span>
+                        <span class="s4-tag hi">Transformers</span>
+                        <span class="s4-tag hi">LLM</span>
+                        <span class="s4-tag hi">NLP</span>
+                        <span class="s4-tag hi">TensorFlow</span>
+                        <span class="s4-tag hi">Data Pipeline</span>
+                    </div>
+                    <div class="s4-tags-hidden">
+                        <span class="s4-tag">Pandas</span>
+                        <span class="s4-tag">NumPy</span>
+                        <span class="s4-tag">Scikit-learn</span>
+                        <span class="s4-tag">Keras</span>
+                        <span class="s4-tag">OpenCV</span>
+                        <span class="s4-tag">PyTorch</span>
+                        <span class="s4-tag">Hugging Face</span>
+                        <span class="s4-tag">Data Visualization</span>
+                        <span class="s4-tag">Computer Vision</span>
+                        <span class="s4-tag">GenAI</span>
+                        <span class="s4-tag">Power BI</span>
+                        <span class="s4-tag">Jupyter</span>
+                        <span class="s4-tag">Kaggle</span>
+                    </div>
+                    <div class="s4-arrow">all 19 skills ↗</div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Database & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">SQLite</span>
-                        <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">Git/GitHub</span>
-                        <span class="skill-tag">Oracle Cloud</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">GenAI</span>
-                        <span class="skill-tag">AI Agents</span>
-                        <span class="skill-tag">Microsoft office</span>
+                <div class="s4-block">
+                    <div class="s4-bar"></div>
+                    <div class="s4-block-top">
+                        <div class="s4-icon-wrap">⚛️</div>
                     </div>
+                    <div class="s4-cat-name">Software Development</div>
+                    <div class="s4-cat-desc">Full stack, from idea to deploy</div>
+                    <div class="s4-tags-visible">
+                        <span class="s4-tag hi">React</span>
+                        <span class="s4-tag hi">Node.js</span>
+                        <span class="s4-tag hi">Next.js</span>
+                        <span class="s4-tag hi">Express.js</span>
+                        <span class="s4-tag hi">REST APIs</span>
+                    </div>
+                    <div class="s4-tags-hidden">
+                        <span class="s4-tag">Flask</span>
+                        <span class="s4-tag">MERN Stack</span>
+                        <span class="s4-tag">Tailwind CSS</span>
+                        <span class="s4-tag">Vite</span>
+                        <span class="s4-tag">JWT Authentication</span>
+                        <span class="s4-tag">FastAPI</span>
+                        <span class="s4-tag">CRUD</span>
+                        <span class="s4-tag">Redis</span>
+                        <span class="s4-tag">Flutter</span>
+                        <span class="s4-tag">Docker</span>
+                    </div>
+                    <div class="s4-arrow">all 15 skills ↗</div>
                 </div>
+
+                <div class="s4-block">
+                    <div class="s4-bar"></div>
+                    <div class="s4-block-top">
+                        <div class="s4-icon-wrap">🗄️</div>
+                    </div>
+                    <div class="s4-cat-name">Database & Tools</div>
+                    <div class="s4-cat-desc">Storage, cloud & the full toolbelt</div>
+                    <div class="s4-tags-visible">
+                        <span class="s4-tag hi">MongoDB</span>
+                        <span class="s4-tag hi">PostgreSQL</span>
+                        <span class="s4-tag hi">Firebase</span>
+                        <span class="s4-tag">MySQL</span>
+                    </div>
+                    <div class="s4-tags-hidden">
+                        <span class="s4-tag">SQLite</span>
+                        <span class="s4-tag">Git / GitHub</span>
+                        <span class="s4-tag">Oracle Cloud</span>
+                        <span class="s4-tag">Figma</span>
+                        <span class="s4-tag">AI Agents</span>
+                        <span class="s4-tag">Microsoft Office Tools</span>
+                    </div>
+                    <div class="s4-arrow">all 10 skills ↗</div>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- ===================== PROJECTS ===================== -->
     <section id="projects" class="projects section">
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
@@ -164,24 +210,23 @@
             <div class="project-card">
                 <h3 class="project-title">FixMe — AI-Powered Productivity Microservices Platform</h3>
                 <p class="project-description">
-                     Built a scalable microservices-based productivity platform with intelligent goal decomposition. Designed secure, isolated services with JWT authentication and integrated AI to transform high-level goals into structured, actionable roadmaps.
+                    Built a scalable microservices-based productivity platform with intelligent goal decomposition. Designed secure, isolated services with JWT authentication and integrated AI to transform high-level goals into structured, actionable roadmaps.
                 </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Prisma ORM</span>
-                        <span class="tech-tag">JWT</span>
-                        <span class="tech-tag">Gemini API</span>
-                        <span class="tech-tag">Microservices</span>
-                    </div>
-                    <div class="project-achievement">
-                        🚀 Reduced manual planning time by ~90% and optimized token usage by ~80% through AI prompt orchestration
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/sharayu-n/FixMe-Core" target="_blank" class="github-btn">🔗 View on GitHub</a>
-                    </div>
+                <div class="project-tech">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Prisma ORM</span>
+                    <span class="tech-tag">JWT</span>
+                    <span class="tech-tag">Gemini API</span>
+                    <span class="tech-tag">Microservices</span>
+                </div>
+                <div class="project-achievement">
+                    🚀 Reduced manual planning time by ~90% and optimized token usage by ~80% through AI prompt orchestration
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/sharayu-n/FixMe-Core" target="_blank" class="github-btn">🔗 View on GitHub</a>
+                </div>
             </div>
-
 
             <div class="project-card">
                 <h3 class="project-title">ResearchAI — Intelligent Research Paper Assistant</h3>
@@ -203,7 +248,6 @@
                     <a href="https://github.com/sharayu-n/ResearchAI" target="_blank" class="github-btn">🔗 View on GitHub</a>
                 </div>
             </div>
-
 
             <div class="project-card">
                 <h3 class="project-title">Heart Disease Prediction System</h3>
@@ -261,6 +305,7 @@
                     <a href="https://github.com/sharayu-n/Complaint-Website-main" target="_blank" class="github-btn">🔗 View on GitHub</a>
                 </div>
             </div>
+
             <div class="project-card">
                 <h3 class="project-title">Nutrition Calculator</h3>
                 <p class="project-description">
@@ -293,14 +338,14 @@
                     <span class="tech-tag">REST APIs</span>
                 </div>
                 <div class="project-achievement">
-                    💡 Smart India Hackathon Project • Tourism Domain 
+                    💡 Smart India Hackathon Project • Tourism Domain
                 </div>
             </div>
 
             <div class="project-card">
                 <h3 class="project-title">Vocomate</h3>
-                        <p class="project-description">
-                Working on a real-time speech recognition project integrating NLP-based grammar correction, sentence structure suggestions, and live captioning to help users practice dialogues, speeches, and interviews with AI-driven feedback.
+                <p class="project-description">
+                    Working on a real-time speech recognition project integrating NLP-based grammar correction, sentence structure suggestions, and live captioning to help users practice dialogues, speeches, and interviews with AI-driven feedback.
                 </p>
                 <div class="project-tech">
                     <span class="tech-tag">Vosk</span>
@@ -308,138 +353,168 @@
                     <span class="tech-tag">Speech Recognition</span>
                     <span class="tech-tag">Generative AI</span>
                 </div>
-                        <div class="project-achievement">
-                            🚀 Independent Project • AI-powered Speech Training
-                        </div>
-             </div>
+                <div class="project-achievement">
+                    🚀 Independent Project • AI-powered Speech Training
+                </div>
+            </div>
+
         </div>
     </section>
 
+    <!-- ===================== EXPERIENCE ===================== -->
     <section id="experience" class="experience section">
         <div class="experience-container">
             <h2 class="section-title">Experience & Leadership</h2>
-            
-          <a href="https://drive.google.com/file/d/1yNE8ZrUR9w-SQbuKFSn23c-N5uVgKQg2/view?usp=sharing" target="_blank" class="experience-card-link">
-              <div class="experience-card">
-                <div class="experience-header">
-                    <div>
-                        <div class="experience-title">Startup Venture</div>
-                        <div class="experience-company">GeekChic</div>
-                    </div>
-                    <div class="experience-duration">4 Months</div>
-                </div>
-                <ul class="experience-points">
-                    <li>Co-founded and managed a student venture selling customized anime merchandise, overseeing sales, customer relations, marketing, and social media management</li>
-                    <li>Contributed to technical development by designing and implementing an e-commerce website with Razorpay payment gateway integration</li>
-                    <li>Successfully sold 350+ T-shirts and featured in the institute's annual tech fest through effective branding and promotional strategies</li>
-                    <li>Gained valuable startup experience learning the importance of timing, execution, and adaptability in entrepreneurial ventures</li>
-                </ul>
-            </div>
-          </a>
 
-          <a href="https://drive.google.com/drive/folders/1uEd37RwiUSbZk0IltpdUG51HLTNWAuz4?usp=drive_link" target="_blank" class="experience-card-link">
-              <div class="experience-card">
-                <div class="experience-header">
-                    <div>
-                        <div class="experience-title">Editorial Lead</div>
-                        <div class="experience-company">ABIT [Association of Budding Information Technocrats]</div>
-                    </div>
-                    <div class="experience-duration">2 Years</div>
-                </div>
-                <ul class="experience-points">
-                    <li>Coordinated large-scale technical fest "Synergy" featuring innovative competitions like Sharkathon focused on innovation and problem-solving</li>
-                    <li>Directed logistics, communications, and ground execution ensuring seamless collaboration among 500+ participants and stakeholders</li>
-                    <li>Led the professional student body of IT department at Rajiv Gandhi Institute, Versova-Mumbai</li>
-                </ul>
-            </div>
-          </a>
+            <div class="exp-hscroll" id="expScroll">
+                <div class="exp-track">
 
-          <a href="https://www.linkedin.com/posts/nagresharayu_internship-completion-certificate-activity-7206640268761018368-ljaq?utm_source=share&utm_medium=member_desktop&rcm=ACoAADoQJScBlwqh1pKhEmnZH3UXfOxjTWDphAw" target="_blank" class="experience-card-link">
-             <div class="experience-card">
-            <div class="experience-header">
-            <div>
-                <div class="experience-title">Python Intern</div>
-                <div class="experience-company">Oasis Infobyte</div>
-            </div>
-            <div class="experience-duration">1 Month</div>
-            </div>
-            <ul class="experience-points">
-                 <li>Completed a one-month internship as part of the OIB-SIP program, developing three Python-based projects</li>
-                 <li><strong>BMI Calculator:</strong> Built a user-friendly application using Custom Tkinter for GUI and SQLite3 for data storage</li>
-                 <li><strong>Weather App:</strong> Created an interactive forecast app with Tkinter, integrating real-time weather data updates</li>
-                 <li><strong>Password Generator:</strong> Designed a secure password generator tool with customizable strength options and Tkinter interface</li>
-                </ul>
-            </div>
-          </a>
-
-          <a href="https://www.linkedin.com/posts/nagresharayu_ngo-teachingmoments-memorablemoments-activity-7217516814342225924-Rq4C?utm_source=share&utm_medium=member_desktop&rcm=ACoAADoQJScBlwqh1pKhEmnZH3UXfOxjTWDphAw" target="_blank" class="experience-card-link">
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title">Community Volunteer</div>
-                            <div class="experience-company">Chess Instructor | Hamaara Sapna [NGO]</div>
-                        </div>
-                        <div class="experience-duration">2 days</div>
+                    <div class="exp-card-h">
+                        <div class="exp-card-num">01</div>
+                        <div class="exp-card-role">Co-founder Software Developer</div>
+                        <div class="exp-card-co">GeekChic - Startup Venture</div>
+                        <span class="exp-card-dur">4 Months</span>
+                        <ul class="exp-card-pts">
+                            <li>Developed a production-ready MERN e-commerce platform, designing scalable RESTful APIs, implementing JWT-based authentication with role-based access control, and integrating Razorpay with secure webhook handling.</li>
+                            <li>Enhanced backend efficiency through MongoDB indexing and structured API design, improving product retrieval speed by ~50% and maintaining order processing under increased user activity</li>
+                            <li>Learned timing, execution, and adaptability in entrepreneurial ventures</li>
+                        </ul>
+                        <a href="https://drive.google.com/file/d/1yNE8ZrUR9w-SQbuKFSn23c-N5uVgKQg2/view?usp=sharing" target="_blank" class="exp-card-link-btn">View↗</a>
                     </div>
-                    <ul class="experience-points">
-                        <li>Conducted a two-day chess workshop for underprivileged children and housewives, focusing on the fundamentals of the game</li>
-                        <li>Taught rules, strategies, and tactical techniques, fostering critical thinking and problem-solving skills</li>
-                        <li>Encouraged participants to develop patience, focus, and analytical skills through interactive gameplay</li>
-                        <li>Contributed to a positive learning environment, boosting confidence and engagement among attendees</li>
-                    </ul>
+
+                    <div class="exp-connector">›</div>
+
+                    <div class="exp-card-h">
+                        <div class="exp-card-num">02</div>
+                        <div class="exp-card-role">Editorial Lead</div>
+                        <div class="exp-card-co">ABIT — Association of Budding Information Technocrats</div>
+                        <span class="exp-card-dur">2 Years</span>
+                        <ul class="exp-card-pts">
+                            <li>Coordinated large-scale tech fest "Synergy" featuring Sharkathon innovation challenges</li>
+                            <li>Directed logistics, communications, and ground execution for 500+ participants</li>
+                            <li>Designed and hosted a peer mentorship program pairing seniors with newcomers; reducing skill gaps and strengthening engagement, retention, and cross-level knowledge sharing</li>
+                            <li>Gained leadership, event management, and team coordination skills through organizing workshops, speaker sessions, and inter-college competitions</li>
+                        </ul>
+                        <a href="https://drive.google.com/drive/folders/1uEd37RwiUSbZk0IltpdUG51HLTNWAuz4?usp=drive_link" target="_blank" class="exp-card-link-btn">View Work ↗</a>
+                    </div>
+
+                    <div class="exp-connector">›</div>
+
+                    <div class="exp-card-h">
+                        <div class="exp-card-num">03</div>
+                        <div class="exp-card-role">Python Intern</div>
+                        <div class="exp-card-co">Oasis Infobyte</div>
+                        <span class="exp-card-dur">1 Month</span>
+                        <ul class="exp-card-pts">
+                            <li>Developed end-to-end applications, implementing OOP-based architecture, input validation, and business logic using Python and regex, improving code reusability and reducing logical errors by ~25%.</li>
+                            <li> Integrated external APIs using Requests and JSON parsing, applied structured exception handling to improve application reliability.</li>
+                            <li>Built lightweight web interfaces using Flask and integrated SQLite for local data persistence, managing version control with Git/GitHub and streamlining testing/debug cycles.</li>
+                        </ul>
+                        <a href="https://www.linkedin.com/posts/nagresharayu_internship-completion-certificate-activity-7206640268761018368-ljaq?utm_source=share&utm_medium=member_desktop" target="_blank" class="exp-card-link-btn">View on LinkedIn ↗</a>
+                    </div>
+
+                    <div class="exp-connector">›</div>
+
+                    <div class="exp-card-h">
+                        <div class="exp-card-num">04</div>
+                        <div class="exp-card-role">Community Volunteer</div>
+                        <div class="exp-card-co">Hamaara Sapna NGO Summer Camp 2023 | Chess Instructor</div>
+                        <span class="exp-card-dur">2 Days</span>
+                        <ul class="exp-card-pts">
+                            <li>Conducted a two-day chess workshop for underprivileged children and housewives</li>
+                            <li>Taught rules, strategies, and tactical techniques fostering critical thinking</li>
+                            <li>Boosted confidence and analytical engagement through interactive gameplay</li>
+                        </ul>
+                        <a href="https://www.linkedin.com/posts/nagresharayu_ngo-teachingmoments-memorablemoments-activity-7217516814342225924-Rq4C?utm_source=share&utm_medium=member_desktop" target="_blank" class="exp-card-link-btn">View on LinkedIn ↗</a>
+                    </div>
+
                 </div>
-          </a>
+            </div>
         </div>
     </section>
 
+    <!-- ===================== CONTACT ===================== -->
     <section id="contact" class="contact section">
-        <h2 class="section-title">Let's Connect</h2>
-        <p style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 3rem;">Ready to collaborate on exciting projects or discuss opportunities in data science and web development?</p>
-        
-        <div class="contact-container">
-            <form class="contact-form" id="contactForm">
-                 <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" name="user_name" class="form-input" placeholder="Your Name" required>
-                            </div>
-                             <div class="form-group">
-                                <input type="email" name="user_email" class="form-input" placeholder="Your Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" class="form-input" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" class="form-input form-textarea" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+        <div class="contact-container-new">
+            <div class="contact-head">
+                <p class="contact-eyebrow">get in touch</p>
+                <h2 class="section-title">Let's Connect</h2>
+            </div>
 
-            <div class="contact-info">
-                <div class="contact-card">
-                    <h3>📧 Email</h3>
-                    <a href="mailto:nagre@usc.edu">nagre@usc.edu</a> |
-                    <a href="mailto:nagresharayu@gmail.com">nagresharayu@gmail.com</a>
+            <div class="contact-split">
+
+                <div class="contact-left">
+                    <div class="contact-tagline">Let's build something <span class="contact-accent">amazing</span> together.</div>
+                    <p class="contact-sub">Open to internships, collaborations, and exciting projects in data science & full-stack development.</p>
+
+                    <div class="contact-links">
+                        <a href="mailto:nagresharayu@gmail.com" class="contact-link">
+                            <div class="contact-link-icon">✉️</div>
+                            <div>
+                                <div class="contact-link-label">Email</div>
+                                <div class="contact-link-val">nagresharayu@gmail.com</div>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/nagresharayu" target="_blank" class="contact-link">
+                            <div class="contact-link-icon">💼</div>
+                            <div>
+                                <div class="contact-link-label">LinkedIn</div>
+                                <div class="contact-link-val">linkedin.com/in/nagresharayu</div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/sharayu-n" target="_blank" class="contact-link">
+                            <div class="contact-link-icon">🐙</div>
+                            <div>
+                                <div class="contact-link-label">GitHub</div>
+                                <div class="contact-link-val">sharayu-n</div>
+                            </div>
+                        </a>
+                        <div class="contact-link">
+                            <div class="contact-link-icon">📍</div>
+                            <div>
+                                <div class="contact-link-label">Location</div>
+                                <div class="contact-link-val">Los Angeles, California</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-card">
-                    <h3>💼 LinkedIn</h3>
-                    <a href="https://linkedin.com/in/nagresharayu" target="_blank">linkedin.com/in/nagresharayu</a>
+
+                <div class="contact-right">
+                    <form class="contact-form-new" id="contactForm">
+                        <div class="contact-form-row">
+                            <div class="contact-field">
+                                <label class="contact-label">Name</label>
+                                <input type="text" name="user_name" class="contact-input" placeholder="Your name" required />
+                            </div>
+                            <div class="contact-field">
+                                <label class="contact-label">Email</label>
+                                <input type="email" name="user_email" class="contact-input" placeholder="your@email.com" required />
+                            </div>
+                        </div>
+                        <div class="contact-field">
+                            <label class="contact-label">Subject</label>
+                            <input type="text" name="subject" class="contact-input" placeholder="What's this about?" required />
+                        </div>
+                        <div class="contact-field">
+                            <label class="contact-label">Message</label>
+                            <textarea name="message" class="contact-input contact-textarea" placeholder="Tell me about your project or opportunity..." required></textarea>
+                        </div>
+                        <button type="submit" class="contact-btn">
+                            Send Message <span class="contact-btn-arrow">→</span>
+                        </button>
+                    </form>
                 </div>
-                <div class="contact-card">
-                    <h3>GitHub</h3>
-                    <a href="https://github.com/sharayu-n">sharayu-n</a>
-                </div>
+
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; Sharayu Nagre Portfolio </p>
+        <p>&copy; Sharayu Nagre Portfolio</p>
     </footer>
-<!-- EmailJS CDN (MUST come before script.js) -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-
-<script src="script.js"></script>
+    <!-- EmailJS CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
